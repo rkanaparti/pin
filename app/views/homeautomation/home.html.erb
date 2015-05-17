@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Home Automation</h2>
+  </div>
+   <div class="panel-body">
+    <div class="form-group">
+       <div class="btn-group" role="group" aria-label="Outlet">
+        
+        <button type="button" class="btn btn-lg btn-primary" id="relayOn">ON</button>
+        <button type="button" class="btn btn-lg btn-default" id="relayOff">OFF</button>
+      </div>
+     </div>
+   </div>
+  <script type="text/javascript">
+
+    //$("[name='relay']").bootstrapSwitch();
+
+    var url = 'https://api.spark.io/v1/devices/53ff75065075535144191587/command';
+    
+   
+        $("#relayOn").click(function(){
+          $.post( url, { args: 'D2 HIGH', access_token: 'ac40c88ce76201217ffdc33bff7632429dd6c7cf'});  
+        });
+
+        $("#relayOff").click(function(){
+          $.post( url, { args: 'D2 LOW', access_token: 'ac40c88ce76201217ffdc33bff7632429dd6c7cf'});  
+        });
+      
+  </script>
+</div>

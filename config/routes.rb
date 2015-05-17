@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  resources :pins
+  get 'homeautomation/home'
+
   devise_for :users
   get 'pages/home'
 
   root 'pages#home'
 
   get 'about'=>'pages#about'
+
+  get 'iot'=>'homeautomation#home'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
