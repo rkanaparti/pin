@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #bootstrap
 gem 'bootstrap-sass'
 
+#paperclip
+gem 'paperclip', '~>4.2'
+
 #puma
 #gem 'puma'
 
